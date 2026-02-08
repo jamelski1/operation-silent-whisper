@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPERATION SILENT FREQUENCY</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- SCAN LINE OVERLAY -->
+  <div class="scanlines"></div>
+
+  <!-- NAVIGATION DOTS -->
+  <nav class="nav-dots" aria-label="Section navigation">
+    <button class="nav-dot active" data-section="0" aria-label="Title"></button>
+    <button class="nav-dot" data-section="1" aria-label="Team Overview"></button>
+    <button class="nav-dot" data-section="2" aria-label="Nolan Barco"></button>
+    <button class="nav-dot" data-section="3" aria-label="Jamel Lawson"></button>
+    <button class="nav-dot" data-section="4" aria-label="Rachael Shima"></button>
+    <button class="nav-dot" data-section="5" aria-label="Target"></button>
+    <button class="nav-dot" data-section="6" aria-label="Weapon System"></button>
+    <button class="nav-dot" data-section="7" aria-label="Closing"></button>
+  </nav>
+
+  <!-- SECTION COUNTER -->
+  <div class="section-counter">
+    <span class="current-section">01</span> / <span class="total-sections">08</span>
+  </div>
+
+  <!-- CLASSIFICATION BANNER -->
+  <div class="classification-bar top">FICTIONAL SCENARIO — FOR EDUCATIONAL PURPOSES ONLY</div>
+  <div class="classification-bar bottom">NATIONAL DEFENSE UNIVERSITY — ACADEMIC EXERCISE</div>
+
+  <!-- ========================================== -->
+  <!-- SECTION 1: TITLE CARD -->
+  <!-- ========================================== -->
+  <section class="section section--title active" data-index="0">
+    <div class="section__inner">
+      <div class="title-card">
+        <div class="title-card__classification">
+          <span class="stamp">CLASSIFIED</span>
+          <span class="divider">|</span>
+          <span class="label">FICTIONAL EXERCISE</span>
+        </div>
+
+        <h1 class="title-card__heading">
+          <span class="title-line title-line--1">OPERATION</span>
+          <span class="title-line title-line--2">SILENT</span>
+          <span class="title-line title-line--3">FREQUENCY</span>
+        </h1>
+
+        <div class="title-card__subtitle">
+          A Fictional Scenario for Educational Purposes
+        </div>
+
+        <div class="title-card__tagline">
+          <span class="quote-mark">&ldquo;</span>Some people sell their country for ideology.<br>We just sell it for the right price.<span class="quote-mark">&rdquo;</span>
+        </div>
+
+        <div class="title-card__prompt">
+          <span class="blink">&#9660;</span> CLICK OR PRESS ARROW TO BEGIN <span class="blink">&#9660;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 2: TEAM OVERVIEW -->
+  <!-- ========================================== -->
+  <section class="section section--team" data-index="1">
+    <div class="section__inner">
+      <div class="dossier-header">
+        <span class="dossier-header__type">ORGANIZATION PROFILE</span>
+        <span class="dossier-header__class">CLASSIFIED</span>
+      </div>
+
+      <div class="team-overview">
+        <div class="team-overview__name">
+          <div class="redacted-line short"></div>
+          <h2>MERIDIAN STRATEGIC<br>CONSULTING, LLC</h2>
+          <div class="redacted-line medium"></div>
+        </div>
+
+        <p class="team-overview__desc">
+          &ldquo;Three broken idealists who learned that ideals are expensive luxuries.&rdquo;
+        </p>
+
+        <div class="team-overview__stats">
+          <div class="stat-block">
+            <span class="stat-block__label">CONTRACT VALUE</span>
+            <span class="stat-block__value">$8,000,000</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block__label">CLIENT</span>
+            <span class="stat-block__value redacted">[REDACTED &mdash; ASSUMED RUSSIAN FEDERATION]</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block__label">OPERATIVES</span>
+            <span class="stat-block__value">3</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block__label">STATUS</span>
+            <span class="stat-block__value status-active">ACTIVE</span>
+          </div>
+        </div>
+
+        <div class="team-overview__roster">
+          <div class="roster-item">
+            <span class="roster-item__callsign">THE COMMANDER</span>
+            <span class="roster-item__line"></span>
+            <span class="roster-item__name">NOLAN BARCO</span>
+          </div>
+          <div class="roster-item">
+            <span class="roster-item__callsign">THE ENGINEER</span>
+            <span class="roster-item__line"></span>
+            <span class="roster-item__name">JAMEL LAWSON</span>
+          </div>
+          <div class="roster-item">
+            <span class="roster-item__callsign">THE GHOST</span>
+            <span class="roster-item__line"></span>
+            <span class="roster-item__name">RACHAEL SHIMA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 3: NOLAN BARCO -->
+  <!-- ========================================== -->
+  <section class="section section--operative" data-index="2">
+    <div class="section__inner">
+      <div class="dossier-header">
+        <span class="dossier-header__type">OPERATIVE DOSSIER</span>
+        <span class="dossier-header__class">CLASSIFIED</span>
+      </div>
+
+      <div class="operative-card">
+        <div class="operative-card__left">
+          <div class="photo-frame" id="nolan-photo">
+            <div class="photo-placeholder">
+              <span class="photo-placeholder__label">PHOTO<br>CLASSIFIED</span>
+            </div>
+            <!-- Replace the div above with: <img src="images/nolan.jpg" alt="Nolan Barco"> -->
+          </div>
+          <div class="operative-card__callsign">&ldquo;THE COMMANDER&rdquo;</div>
+          <div class="operative-card__status">
+            <span class="status-label">STATUS:</span>
+            <span class="status-value status--disavowed">DISAVOWED</span>
+          </div>
+        </div>
+
+        <div class="operative-card__right">
+          <h2 class="operative-card__name">NOLAN BARCO</h2>
+
+          <div class="operative-card__meta">
+            <div class="meta-row">
+              <span class="meta-label">AGE</span>
+              <span class="meta-value">53</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">CONTRACT PRICE</span>
+              <span class="meta-value">$2.67M</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">FORMER CREDENTIALS</span>
+              <span class="meta-value">34 Years Combined</span>
+            </div>
+          </div>
+
+          <div class="operative-card__details">
+            <div class="detail-block">
+              <span class="detail-block__label">BACKGROUND</span>
+              <ul class="detail-list">
+                <li>22 years U.S. Army Special Operations</li>
+                <li>12 years Private Security Consulting</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <span class="detail-block__label">SPECIALTY</span>
+              <p>Operational Command &mdash; Strategic planning, leadership, executing high-stakes &ldquo;unconventional solutions&rdquo;</p>
+            </div>
+            <div class="detail-block">
+              <span class="detail-block__label">ROLE</span>
+              <p><strong>TEAM LEADER</strong> &mdash; Provides operational experience and command authority for mercenary operations</p>
+            </div>
+          </div>
+
+          <div class="operative-card__grievance">
+            <span class="detail-block__label">GRIEVANCE</span>
+            <p>Rejects the concept of &ldquo;good guys,&rdquo; viewing violence as honest commercial trade</p>
+          </div>
+
+          <blockquote class="operative-card__quote">
+            &ldquo;I watched that country become something I don&rsquo;t recognize.&rdquo;
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 4: JAMEL LAWSON -->
+  <!-- ========================================== -->
+  <section class="section section--operative" data-index="3">
+    <div class="section__inner">
+      <div class="dossier-header">
+        <span class="dossier-header__type">OPERATIVE DOSSIER</span>
+        <span class="dossier-header__class">CLASSIFIED</span>
+      </div>
+
+      <div class="operative-card">
+        <div class="operative-card__left">
+          <div class="photo-frame" id="jamel-photo">
+            <div class="photo-placeholder">
+              <span class="photo-placeholder__label">PHOTO<br>CLASSIFIED</span>
+            </div>
+            <!-- Replace the div above with: <img src="images/jamel.jpg" alt="Jamel Lawson"> -->
+          </div>
+          <div class="operative-card__callsign">&ldquo;THE ENGINEER&rdquo;</div>
+          <div class="operative-card__status">
+            <span class="status-label">STATUS:</span>
+            <span class="status-value status--burned">BURNED</span>
+          </div>
+        </div>
+
+        <div class="operative-card__right">
+          <h2 class="operative-card__name">JAMEL LAWSON</h2>
+
+          <div class="operative-card__meta">
+            <div class="meta-row">
+              <span class="meta-label">AGE</span>
+              <span class="meta-value">35</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">CONTRACT PRICE</span>
+              <span class="meta-value">$2.67M</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">CLEARANCE</span>
+              <span class="meta-value"><s>TS/SCI</s> [REVOKED]</span>
+            </div>
+          </div>
+
+          <div class="operative-card__details">
+            <div class="detail-block">
+              <span class="detail-block__label">FORMER CREDENTIALS</span>
+              <ul class="detail-list">
+                <li>12 Years DARPA</li>
+                <li>Directed Energy Research Division</li>
+                <li>Non-Lethal Weapons Development</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <span class="detail-block__label">TECHNICAL SPECIALIZATION</span>
+              <p class="highlight-text">THE WHISPER II</p>
+              <p>RF/Acoustic hybrid weapon for cognitive degradation</p>
+            </div>
+            <div class="detail-block">
+              <span class="detail-block__label">TECH SPECS</span>
+              <table class="spec-table">
+                <tr><td>RF Emitter</td><td>2.4 &ndash; 3.0 GHz</td></tr>
+                <tr><td>Acoustic Array</td><td>6 &ndash; 22 kHz</td></tr>
+                <tr><td>Range</td><td>20&ndash;40 meters</td></tr>
+                <tr><td>Detection</td><td>Negligible</td></tr>
+              </table>
+            </div>
+            <div class="detail-block">
+              <span class="detail-block__label">ROLE</span>
+              <p><strong>TECHNICAL EXPERT</strong> &mdash; Primary architect responsible for building and deploying directed energy weapons</p>
+            </div>
+          </div>
+
+          <div class="operative-card__grievance">
+            <span class="detail-block__label">GRIEVANCE</span>
+            <p>Deep bitterness toward the government that discarded him like &ldquo;defective equipment&rdquo;</p>
+          </div>
+
+          <blockquote class="operative-card__quote">
+            &ldquo;Treason requires allegiance to apply.&rdquo;
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 5: RACHAEL SHIMA -->
+  <!-- ========================================== -->
+  <section class="section section--operative" data-index="4">
+    <div class="section__inner">
+      <div class="section__inner">
+      <div class="dossier-header">
+        <span class="dossier-header__type">OPERATIVE DOSSIER</span>
+        <span class="dossier-header__class">CLASSIFIED</span>
+      </div>
+
+      <div class="operative-card">
+        <div class="operative-card__left">
+          <div class="photo-frame" id="rachael-photo">
+            <div class="photo-placeholder">
+              <span class="photo-placeholder__label">PHOTO<br>CLASSIFIED</span>
+            </div>
+            <!-- Replace the div above with: <img src="images/rachael.jpg" alt="Rachael Shima"> -->
+          </div>
+          <div class="operative-card__callsign">&ldquo;THE GHOST&rdquo;</div>
+          <div class="operative-card__status">
+            <span class="status-label">STATUS:</span>
+            <span class="status-value status--erased">ERASED</span>
+          </div>
+        </div>
+
+        <div class="operative-card__right">
+          <h2 class="operative-card__name">RACHAEL SHIMA</h2>
+
+          <div class="operative-card__meta">
+            <div class="meta-row">
+              <span class="meta-label">AGE</span>
+              <span class="meta-value">42</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">CONTRACT PRICE</span>
+              <span class="meta-value">$2.67M</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">EXISTENCE</span>
+              <span class="meta-value status--erased">UNOFFICIAL</span>
+            </div>
+          </div>
+
+          <div class="operative-card__details">
+            <div class="detail-block">
+              <span class="detail-block__label">FORMER CREDENTIALS</span>
+              <ul class="detail-list">
+                <li>15 Years CIA, Directorate of Operations</li>
+                <li>Pattern-of-Life Analysis Specialist</li>
+                <li>High-Value Target Surveillance</li>
+                <li>Counter-Surveillance Expert</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <span class="detail-block__label">SPECIALTY</span>
+              <p><strong>Intelligence Lead</strong> &mdash; Target analysis, vulnerability identification, long-term surveillance</p>
+            </div>
+            <div class="detail-block">
+              <span class="detail-block__label">OPERATIONAL CONTRIBUTIONS</span>
+              <ul class="detail-list">
+                <li>Secured deployment site</li>
+                <li>6 months target surveillance</li>
+                <li>Identified directed energy blind spot</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <span class="detail-block__label">ROLE</span>
+              <p><strong>INTELLIGENCE LEAD</strong> &mdash; Responsible for target surveillance, deployment site acquisition, and counter-surveillance</p>
+            </div>
+          </div>
+
+          <div class="operative-card__grievance">
+            <span class="detail-block__label">GRIEVANCE</span>
+            <p>Career ended by institutional embarrassment after exposing pharmaceutical corruption</p>
+          </div>
+
+          <blockquote class="operative-card__quote">
+            &ldquo;Loyalty was just a transaction.&rdquo;
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 6: TARGET — LTG RAYMOND CALDWELL -->
+  <!-- ========================================== -->
+  <section class="section section--target" data-index="5">
+    <div class="section__inner">
+      <div class="dossier-header">
+        <span class="dossier-header__type">TARGET PROFILE</span>
+        <span class="dossier-header__class">SURVEILLANCE</span>
+      </div>
+
+      <div class="target-card">
+        <div class="target-card__left">
+          <div class="photo-frame photo-frame--target" id="caldwell-photo">
+            <div class="photo-placeholder">
+              <span class="photo-placeholder__label">PHOTO<br>SURVEILLANCE</span>
+            </div>
+            <!-- Replace the div above with: <img src="images/caldwell.jpg" alt="LTG Raymond Caldwell"> -->
+          </div>
+          <div class="target-card__designation">
+            <span class="target-marker">&#9678; TARGET</span>
+          </div>
+        </div>
+
+        <div class="target-card__right">
+          <h2 class="target-card__name">LTG RAYMOND CALDWELL</h2>
+          <p class="target-card__title">Deputy Commander, USCYBERCOM<br>Deputy Director, NSA</p>
+
+          <div class="operative-card__meta">
+            <div class="meta-row">
+              <span class="meta-label">AGE</span>
+              <span class="meta-value">61</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">RANK</span>
+              <span class="meta-value">Lieutenant General (O-9)</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">SERVICE</span>
+              <span class="meta-value">40 Years in Uniform</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">CLEARANCE</span>
+              <span class="meta-value">TS/SCI + Compartmented</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">RESIDENCE</span>
+              <span class="meta-value">Alexandria, VA</span>
+            </div>
+          </div>
+
+          <div class="detail-block">
+            <span class="detail-block__label">STRATEGIC RATIONALE</span>
+            <p>$15&ndash;20B defensive cost to adversaries. Architect of U.S. Offensive Cyber Strategy. His policy recommendations represent an existential threat to adversary infrastructure.</p>
+          </div>
+
+          <div class="testimony-box">
+            <span class="testimony-box__header">THE TESTIMONY</span>
+            <p class="testimony-box__countdown"><span class="countdown-number">11</span> WEEKS until Senate Armed Services</p>
+            <p>Will recommend expanded targeting authorities, pre-positioning in adversary infrastructure, and <strong>$4.7B budget allocation</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="vulnerability-grid">
+        <div class="vuln-box">
+          <span class="vuln-box__number">01</span>
+          <span class="vuln-box__label">LOCATION</span>
+          <p>Alexandria Townhouse &mdash; Security departs overnight</p>
+        </div>
+        <div class="vuln-box">
+          <span class="vuln-box__number">02</span>
+          <span class="vuln-box__label">TECHNICAL BLIND SPOT</span>
+          <p>Zero detection capability for directed energy</p>
+        </div>
+        <div class="vuln-box">
+          <span class="vuln-box__number">03</span>
+          <span class="vuln-box__label">OPERATIONAL WINDOW</span>
+          <p>High-intensity testimony preparation period</p>
+        </div>
+      </div>
+
+      <blockquote class="target-quote">
+        &ldquo;Death creates martyrs. Diminished credibility delays policy for years.&rdquo;
+      </blockquote>
+
+      <div class="mission-objective">
+        <span class="mission-objective__label">MISSION OBJECTIVE</span>
+        <p class="mission-objective__text">DEGRADE COGNITIVE FUNCTION PRIOR TO TESTIMONY</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 7: WEAPON — THE WHISPER II -->
+  <!-- ========================================== -->
+  <section class="section section--weapon" data-index="6">
+    <div class="section__inner">
+      <div class="dossier-header">
+        <span class="dossier-header__type">WEAPON SYSTEM</span>
+        <span class="dossier-header__class">CLASSIFIED</span>
+      </div>
+
+      <div class="weapon-header">
+        <h2 class="weapon-header__name">THE WHISPER II</h2>
+        <p class="weapon-header__subtitle">Portable Directed Energy Device &mdash; RF/Acoustic Hybrid</p>
+      </div>
+
+      <div class="weapon-layout">
+        <div class="weapon-layout__left">
+          <div class="weapon-schematic" id="weapon-schematic">
+            <div class="schematic-placeholder">
+              <div class="schematic-lines">
+                <div class="schematic-line"></div>
+                <div class="schematic-line"></div>
+                <div class="schematic-line"></div>
+                <div class="schematic-line"></div>
+                <div class="schematic-line"></div>
+              </div>
+              <span class="schematic-label">[SCHEMATIC CLASSIFIED]</span>
+            </div>
+            <!-- Replace contents with: <img src="images/whisper2.jpg" alt="WHISPER II Schematic"> -->
+          </div>
+
+          <div class="detail-block">
+            <span class="detail-block__label">TECHNICAL SPECIFICATIONS</span>
+            <table class="spec-table spec-table--full">
+              <tr><td>RF Emitter</td><td>2.4 &ndash; 3.0 GHz</td></tr>
+              <tr><td>Acoustic Array</td><td>6&ndash;8 Hz / 18&ndash;22 kHz</td></tr>
+              <tr><td>Effective Range</td><td>20&ndash;40 meters</td></tr>
+              <tr><td>Power Source</td><td>Li-ion / Vehicle</td></tr>
+              <tr><td>Concealment</td><td>Telecom equipment</td></tr>
+              <tr><td>Detection Risk</td><td>Negligible</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="weapon-layout__right">
+          <div class="rationale-box">
+            <span class="rationale-box__header">NO PHYSICAL EVIDENCE</span>
+            <p>No bullet, no poison, no residue. RF frequencies overlap with commercial WiFi. Symptoms mimic natural illness.</p>
+          </div>
+
+          <div class="rationale-box rationale-box--effect">
+            <span class="rationale-box__header">COGNITIVE DEGRADATION</span>
+            <p>Sleep architecture disruption leads to cumulative impairment: memory failure, word-finding problems, executive dysfunction.</p>
+          </div>
+
+          <div class="detail-block">
+            <span class="detail-block__label">METHOD COMPARISON</span>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Op. Risk</th>
+                  <th>Strategic Flaw</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Assassination</td>
+                  <td class="risk-high">HIGH</td>
+                  <td>Creates martyrs; accelerates adverse policy</td>
+                </tr>
+                <tr>
+                  <td>Poison</td>
+                  <td class="risk-high">HIGH</td>
+                  <td>Leaves forensic evidence; attribution risk</td>
+                </tr>
+                <tr class="row-highlight">
+                  <td>Whisper II</td>
+                  <td class="risk-negligible">NEGLIGIBLE</td>
+                  <td>Mimics natural illness; achieves objective via confusion</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <span class="detail-block__label">DEPLOYMENT TIMELINE</span>
+        <div class="timeline__phases">
+          <div class="timeline__phase">
+            <span class="timeline__phase-label">WEEK 1&ndash;2</span>
+            <div class="timeline__phase-bar phase-1"></div>
+            <ul class="timeline__effects">
+              <li>Sleep disruption</li>
+              <li>Mild headaches</li>
+              <li>Fatigue</li>
+            </ul>
+          </div>
+          <div class="timeline__phase">
+            <span class="timeline__phase-label">WEEK 3&ndash;4</span>
+            <div class="timeline__phase-bar phase-2"></div>
+            <ul class="timeline__effects">
+              <li>Persistent tinnitus</li>
+              <li>Concentration lapses</li>
+              <li>Irritability</li>
+            </ul>
+          </div>
+          <div class="timeline__phase">
+            <span class="timeline__phase-label">WEEK 5&ndash;6</span>
+            <div class="timeline__phase-bar phase-3"></div>
+            <ul class="timeline__effects">
+              <li>Memory failures</li>
+              <li>Word-finding problems</li>
+              <li>Vertigo</li>
+            </ul>
+          </div>
+          <div class="timeline__phase">
+            <span class="timeline__phase-label">WEEK 7+</span>
+            <div class="timeline__phase-bar phase-4"></div>
+            <ul class="timeline__effects">
+              <li>Catastrophic impairment</li>
+              <li>Testimony compromised</li>
+              <li>Mission success</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <blockquote class="weapon-quote">
+        &ldquo;Dead men become heroes. Confused men become liabilities.&rdquo;
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 8: CLOSING CARD -->
+  <!-- ========================================== -->
+  <section class="section section--closing" data-index="7">
+    <div class="section__inner">
+      <div class="closing-card">
+        <div class="closing-card__classification">
+          <span class="stamp">END OF BRIEFING</span>
+        </div>
+
+        <h2 class="closing-card__heading">
+          <span class="title-line title-line--1">OPERATION</span>
+          <span class="title-line title-line--2">SILENT</span>
+          <span class="title-line title-line--3">FREQUENCY</span>
+        </h2>
+
+        <div class="closing-card__codename">
+          <span class="codename-label">CODENAME IN MOSCOW</span>
+          <span class="codename-russian">ОТГОЛОСОК</span>
+          <span class="codename-translation">&ldquo;Echo&rdquo;</span>
+        </div>
+
+        <div class="closing-card__tagline">
+          &ldquo;Three broken idealists who learned that ideals are expensive luxuries.&rdquo;
+        </div>
+
+        <div class="closing-card__end">
+          <div class="end-line"></div>
+          <span>END OF BRIEFING</span>
+          <div class="end-line"></div>
+        </div>
+
+        <div class="closing-card__disclaimer">
+          This presentation is a fictional scenario created for academic purposes at the National Defense University.<br>
+          All characters, organizations, and events are entirely fictitious.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
