@@ -125,6 +125,37 @@ body {
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
+/* --- MUTE TOGGLE --- */
+.mute-toggle {
+  position: fixed;
+  left: 24px;
+  bottom: 56px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--gray);
+  background: none;
+  border: 1px solid var(--mid-gray);
+  padding: 4px 10px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.mute-toggle:hover {
+  color: var(--pure-white);
+  border-color: var(--gray);
+}
+
+.mute-toggle.unmuted {
+  color: var(--pure-white);
+  border-color: var(--light-gray);
+}
+
+.mute-toggle__icon--unmuted { display: none; }
+.mute-toggle.unmuted .mute-toggle__icon--muted { display: none; }
+.mute-toggle.unmuted .mute-toggle__icon--unmuted { display: inline; }
+
 /* --- SECTION COUNTER --- */
 .section-counter {
   position: fixed;

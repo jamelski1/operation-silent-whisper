@@ -86,11 +86,30 @@
     }
   }
 
+  // --- MUTE TOGGLE ---
+  var muteBtn = document.getElementById('mute-toggle');
+
+  function setMuted(muted) {
+    var videos = document.querySelectorAll('.photo-frame video');
+    videos.forEach(function (v) { v.muted = muted; });
+    muteBtn.classList.toggle('unmuted', !muted);
+  }
+
+  muteBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var isMuted = !muteBtn.classList.contains('unmuted');
+    setMuted(!isMuted);
+  });
+
   // --- EVENT BINDING ---
   function bindEvents() {
     // Keyboard navigation
     document.addEventListener('keydown', function (e) {
       switch (e.key) {
+        case 'm':
+          var isMuted = !muteBtn.classList.contains('unmuted');
+          setMuted(!isMuted);
+          return;
         case 'ArrowRight':
         case 'ArrowDown':
         case ' ':
