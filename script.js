@@ -86,19 +86,37 @@
     }
   }
 
-  // --- MUTE TOGGLE ---
-  var muteBtn = document.getElementById('mute-toggle');
-
-  function setMuted(muted) {
-    var videos = document.querySelectorAll('.photo-frame video');
-    videos.forEach(function (v) { v.muted = muted; });
-    muteBtn.classList.toggle('unmuted', !muted);
+  // --- PER-VIDEO MUTE TOGGLE ---
+  function muteAllVideos() {
+    document.querySelectorAll('.photo-frame').forEach(function (frame) {
+      var video = frame.querySelector('video');
+      var btn = frame.querySelector('.video-mute-btn');
+      if (video) video.muted = true;
+      if (btn) btn.classList.remove('playing');
+    });
   }
 
-  muteBtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    var isMuted = !muteBtn.classList.contains('unmuted');
-    setMuted(!isMuted);
+  function toggleVideoAudio(frame) {
+    var video = frame.querySelector('video');
+    var btn = frame.querySelector('.video-mute-btn');
+    if (!video || !btn) return;
+
+    if (video.muted) {
+      // Unmute this one, mute all others
+      muteAllVideos();
+      video.muted = false;
+      btn.classList.add('playing');
+    } else {
+      video.muted = true;
+      btn.classList.remove('playing');
+    }
+  }
+
+  document.querySelectorAll('.video-mute-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      toggleVideoAudio(btn.closest('.photo-frame'));
+    });
   });
 
   // --- EVENT BINDING ---
@@ -107,8 +125,11 @@
     document.addEventListener('keydown', function (e) {
       switch (e.key) {
         case 'm':
-          var isMuted = !muteBtn.classList.contains('unmuted');
-          setMuted(!isMuted);
+          // Toggle audio on the current section's video (if any)
+          var currentFrame = state.sections[state.currentSection].querySelector('.photo-frame');
+          if (currentFrame && currentFrame.querySelector('video')) {
+            toggleVideoAudio(currentFrame);
+          }
           return;
         case 'ArrowRight':
         case 'ArrowDown':

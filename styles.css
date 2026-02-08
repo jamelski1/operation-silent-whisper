@@ -125,36 +125,45 @@ body {
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
-/* --- MUTE TOGGLE --- */
-.mute-toggle {
-  position: fixed;
-  left: 24px;
-  bottom: 56px;
+/* --- PER-VIDEO MUTE TOGGLE --- */
+.video-mute-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 6px 0;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  color: var(--gray);
-  background: none;
-  border: 1px solid var(--mid-gray);
-  padding: 4px 10px;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: var(--light-gray);
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-top: 1px solid var(--mid-gray);
   cursor: pointer;
-  z-index: 1000;
+  z-index: 2;
   transition: all 0.3s ease;
+  opacity: 0;
 }
 
-.mute-toggle:hover {
+.photo-frame:hover .video-mute-btn {
+  opacity: 1;
+}
+
+.video-mute-btn:hover {
   color: var(--pure-white);
-  border-color: var(--gray);
+  background: rgba(0, 0, 0, 0.85);
 }
 
-.mute-toggle.unmuted {
+.video-mute-btn.playing {
+  opacity: 1;
   color: var(--pure-white);
-  border-color: var(--light-gray);
+  background: rgba(0, 0, 0, 0.8);
+  border-top-color: var(--light-gray);
 }
 
-.mute-toggle__icon--unmuted { display: none; }
-.mute-toggle.unmuted .mute-toggle__icon--muted { display: none; }
-.mute-toggle.unmuted .mute-toggle__icon--unmuted { display: inline; }
+.vm-icon--on { display: none; }
+.video-mute-btn.playing .vm-icon--off { display: none; }
+.video-mute-btn.playing .vm-icon--on { display: inline; }
 
 /* --- SECTION COUNTER --- */
 .section-counter {
